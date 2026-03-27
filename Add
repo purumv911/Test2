@@ -1,0 +1,13 @@
+public class AddTwoNumbers {
+    public static void main(String[] args) {
+        // Declare two integer variables and assign values
+        int num1 = 5;
+        int num2 = 15;
+        
+        // Declare a variable to store the sum and perform the addition
+        int sum = num1 + num2;
+        
+        // Print the result to the console
+        System.out.println("Sum of " + num1 + " and " + num2 + " is: " + sum);
+    }
+}
