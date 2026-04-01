@@ -1,0 +1,17 @@
+<div class="container">
+  <h1 class="page-title">{{ pageTitle }}</h1>
+  <table class="results-table">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let result of results">
+        <td>{{ result.title }}</td>
+        <td>{{ result.description }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
