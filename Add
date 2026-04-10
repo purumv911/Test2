@@ -1,14 +1,52 @@
-public class AddTwoNumbers {
+import java.util.Scanner;
+
+public class ArithmeticCalculator {
     public static void main(String[] args) {
-        // Declare two integer variables and assign values
-        int num1 = 5;
-        int num2 = 15;
-        
-        // Declare a variable to store the sum and perform the addition
-        int sum = num1 + num2;
-        System.out.println("Test");
-        
-        // Print the result to the console
-        System.out.println("Sum of " + num1 + " and " + num2 + " is: " + sum);
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter first number: ");
+        double num1 = scanner.nextDouble();
+
+        System.out.print("Enter second number: ");
+        double num2 = scanner.nextDouble();
+
+        System.out.println("\nSelect an operation:");
+        System.out.println("1. Addition");
+        System.out.println("2. Subtraction");
+        System.out.println("3. Multiplication");
+        System.out.println("4. Division");
+        System.out.println("5. Modulus");
+        System.out.print("Enter your choice (1-5): ");
+        int choice = scanner.nextInt();
+
+        switch (choice) {
+            case 1:
+                System.out.println(num1 + " + " + num2 + " = " + (num1 + num2));
+                break;
+            case 2:
+                System.out.println(num1 + " - " + num2 + " = " + (num1 - num2));
+                break;
+            case 3:
+                System.out.println(num1 + " * " + num2 + " = " + (num1 * num2));
+                break;
+            case 4:
+                if (num2 == 0) {
+                    System.out.println("Error: Cannot divide by zero.");
+                } else {
+                    System.out.println(num1 + " / " + num2 + " = " + (num1 / num2));
+                }
+                break;
+            case 5:
+                if (num2 == 0) {
+                    System.out.println("Error: Cannot perform modulus by zero.");
+                } else {
+                    System.out.println(num1 + " % " + num2 + " = " + (num1 % num2));
+                }
+                break;
+            default:
+                System.out.println("Invalid choice.");
+        }
+
+        scanner.close();
     }
 }
